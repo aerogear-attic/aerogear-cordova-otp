@@ -21,26 +21,30 @@
   </js-module>
 
   <!-- ios -->
-  <!--<platform name="ios">-->
-  <!--&lt;!&ndash; Cordova >= 2.8 &ndash;&gt;-->
-  <!--<config-file target="config.xml" parent="/*">-->
-  <!--<feature name="BarcodeScanner">-->
-  <!--<param name="ios-package" value="CDVBarcodeScanner"/>-->
-  <!--</feature>-->
-  <!--</config-file>-->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="BarcodeScanner">
+        <param name="ios-package" value="CDVBarcodeScanner"/>
+      </feature>
+      <feature name="AeroGearPlugin">
+        <param name="ios-package" value="CDVAeroGearPlugin"/>
+      </feature>
+    </config-file>
 
-  <!--<resource-file src="src/ios/scannerOverlay.xib"/>-->
+    <asset src="src/ios/Podfile" target="Podfile" />
 
-  <!--<header-file src="src/ios/zxing-all-in-one.h"/>-->
+    <resource-file src="src/ios/scannerOverlay.xib"/>
 
-  <!--<source-file src="src/ios/CDVBarcodeScanner.mm" compiler-flags="-fno-objc-arc"/>-->
-  <!--<source-file src="src/ios/zxing-all-in-one.cpp"/>-->
+    <header-file src="src/ios/zxing-all-in-one.h"/>
 
-  <!--<framework src="libiconv.dylib"/>-->
-  <!--<framework src="AVFoundation.framework"/>-->
-  <!--<framework src="AssetsLibrary.framework"/>-->
-  <!--<framework src="CoreVideo.framework"/>-->
-  <!--</platform>-->
+    <source-file src="src/ios/CDVBarcodeScanner.mm" compiler-flags="-fno-objc-arc"/>
+    <source-file src="src/ios/zxing-all-in-one.cpp"/>
+
+    <framework src="libiconv.dylib"/>
+    <framework src="AVFoundation.framework"/>
+    <framework src="AssetsLibrary.framework"/>
+    <framework src="CoreVideo.framework"/>
+  </platform>
 
   <!-- android -->
   <platform name="android">
