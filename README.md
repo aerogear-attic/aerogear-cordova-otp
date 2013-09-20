@@ -1,7 +1,7 @@
 AeroGear OTP Cordova
 ====================
 
-Cordova plugin for OTP comes with [BarcodeScanner](wildabeast/BarcodeScanner) to be able to easly obtain the secret
+Cordova plugin for OTP comes with [BarcodeScanner](/wildabeast/BarcodeScanner) to be able to easly obtain the secret
 
 ## To install
 
