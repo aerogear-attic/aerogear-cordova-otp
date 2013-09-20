@@ -1,7 +1,7 @@
 AeroGear OTP Cordova
 ====================
 
-Cordova plugin for OTP comes with [BarcodeScanner](/wildabeast/BarcodeScanner) to be able to easly obtain the secret
+Cordova plugin for OTP depends on [BarcodeScanner](https://github.com/wildabeast/BarcodeScanner) to be able to easly obtain the secret
 
 ## To install
 
@@ -10,6 +10,12 @@ Cordova plugin for OTP comes with [BarcodeScanner](/wildabeast/BarcodeScanner) t
     cordova platform add android
     cordova plugin add <location-of-this-plugin>
     cordova build
+
+## iOS
+Install [cocapods](http://cocoapods.org/) if you don't have it. Move Podfile out of the www directory and run install:
+
+    mv www/Podfile .
+    pod install
 
 ## Example
 Copy ``example/*`` into the ``www`` folder of your project and press the OTP button. Initially it will fire up the 
@@ -29,5 +35,5 @@ or seperate methods
      // initialize OTP
      var generator = new AeroGear.Totp(secret);
      // generate token
-     generator.generateOTP(function(result) { /* resutl is the otp */ });
+     generator.generateOTP(function(result) { /* result is the otp */ });
 
