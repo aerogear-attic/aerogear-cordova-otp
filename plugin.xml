@@ -29,7 +29,7 @@
 
     <header-file src="src/ios/CDVAeroGearPlugin.h" />
     <source-file src="src/ios/CDVAeroGearPlugin.m"/>
-    <asset src="src/ios/Podfile" target="Podfile" />
+    <asset src="src/ios/Podfile" target="../../Podfile" />
   </platform>
 
   <!-- android -->

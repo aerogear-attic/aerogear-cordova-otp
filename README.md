@@ -12,10 +12,11 @@ Cordova plugin for OTP depends on [BarcodeScanner](https://github.com/wildabeast
     cordova build
 
 ## iOS
-Install [cocapods](http://cocoapods.org/) if you don't have it. Move Podfile out of the www directory and run install:
+Install [cocapods](http://cocoapods.org/) if you don't have it, run install:
 
-    mv www/Podfile .
+    cd platforms/ios/
     pod install
+    open HelloCordova.xcworkspace
 
 ## Example
 Copy ``example/*`` into the ``www`` folder of your project and press the OTP button. Initially it will fire up the 
