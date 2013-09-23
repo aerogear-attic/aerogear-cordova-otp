@@ -35,9 +35,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
+    onOTPGenerated: function (result) {
+        document.getElementById('result').innerHTML = result
+    },
     test: function() {
         var totp = new AeroGear.Totp();
-        totp.generate(function(result) { document.getElementById('result').innerHTML = result });
+        totp.generate(app.onOTPGenerated);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
