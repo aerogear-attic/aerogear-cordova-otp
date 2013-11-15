@@ -21,6 +21,9 @@
 
   <!-- ios -->
   <platform name="ios">
+    <info>
+      You need to to run `pod install` to finish the installation
+    </info>
     <config-file target="config.xml" parent="/*">
       <feature name="AeroGearPlugin">
         <param name="ios-package" value="CDVAeroGearPlugin"/>
