@@ -12,8 +12,8 @@
     <engine name="cordova" version=">=3.0.0"/>
   </engines>
 
-  <dependency id="com.phonegap.plugins.barcodescanner" url="https://github.com/wildabeast/BarcodeScanner"
-              commit="a310fda2d7d55e650a65b9d0327eff87356c0818" />
+  <dependency id="com.phonegap.plugins.barcodescanner" url="https://github.com/wildabeast/BarcodeScanner.git"
+              commit="HEAD" />
 
   <js-module src="www/aerogear-opt.js" name="AeroGear.Totp">
     <clobbers target="cordova.plugins.totp"/>
@@ -21,6 +21,9 @@
 
   <!-- ios -->
   <platform name="ios">
+    <info>
+      You need to to run `pod install` to finish the installation
+    </info>
     <config-file target="config.xml" parent="/*">
       <feature name="AeroGearPlugin">
         <param name="ios-package" value="CDVAeroGearPlugin"/>
