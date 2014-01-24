@@ -1,5 +1,4 @@
-/* AeroGear Cordova Plugin
-* https://github.com/aerogear/aerogear-pushplugin-cordova
+/* 
 * JBoss, Home of Professional Open Source
 * Copyright Red Hat, Inc., and individual contributors
 *
