@@ -18,8 +18,8 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDV.h>
 #import <Cordova/CDVPlugin.h>
-#import <AGTotp.h>
-#import <AGBase32.h>
+#import "AGTotp.h"
+#import "AGBase32.h"
 
 @interface CDVAeroGearPlugin : CDVPlugin
 

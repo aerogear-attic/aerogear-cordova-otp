@@ -21,9 +21,6 @@
 
   <!-- ios -->
   <platform name="ios">
-    <info>
-      You need to to run `pod install` to finish the installation
-    </info>
     <config-file target="config.xml" parent="/*">
       <feature name="AeroGearPlugin">
         <param name="ios-package" value="CDVAeroGearPlugin"/>
@@ -32,7 +29,12 @@
 
     <header-file src="src/ios/CDVAeroGearPlugin.h" />
     <source-file src="src/ios/CDVAeroGearPlugin.m"/>
-    <asset src="src/ios/Podfile" target="../../Podfile" />
+    
+    <header-file src="src/ios/AGOtp.h"/>
+    <header-file src="src/ios/AGTotp.h"/>
+    <header-file src="src/ios/AGBase32.h"/>
+    <framework src="Foundation.framework"/>
+    <source-file src="src/ios/libaerogear-otp.a" framework="true"/>
   </platform>
 
   <!-- android -->
