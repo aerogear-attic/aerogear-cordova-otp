@@ -9,7 +9,7 @@
   <license>MIT</license>
 
   <engines>
-    <engine name="cordova" version=">=3.0.0"/>
+    <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
   <dependency id="com.phonegap.plugins.barcodescanner" url="https://github.com/wildabeast/BarcodeScanner.git"
