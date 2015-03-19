@@ -36,11 +36,13 @@ totp.generate(function(result) { /* result is the otp */ );
 
 or seperate methods
 
-     String secret = "B2374TNIQ3HKC446";
-     // initialize OTP
-     var generator = new AeroGear.Totp(secret);
-     // generate token
-     generator.generateOTP(function(result) { /* result is the otp */ });
+```javascript
+ String secret = "B2374TNIQ3HKC446";
+ // initialize OTP
+ var generator = new AeroGear.Totp(secret);
+ // generate token
+ generator.generateOTP(function(result) { /* result is the otp */ });
+```
 
 ## Documentation
 
