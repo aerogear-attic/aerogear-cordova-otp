@@ -20,13 +20,6 @@ Cordova plugin for OTP depends on [BarcodeScanner](https://github.com/wildabeast
     cordova plugin add <location-of-this-plugin>
     cordova build
 
-## iOS
-Install [cocapods](http://cocoapods.org/) if you don't have it, run install:
-
-    cd platforms/ios/
-    pod install
-    open HelloCordova.xcworkspace
-
 ## Example
 Copy ``example/*`` into the ``www`` folder of your project and press the OTP button. Initially it will fire up the 
 BarcodeScanner to scan a QR code with an url like ``otpauth://totp/username?secret=7SPQJZ7CDF7NTKJ2`` this secret will be 
