@@ -29,8 +29,10 @@ Try it on this [demo page](http://controller-aerogear.rhcloud.com/aerogear-contr
 
 ## Plugin API
 
-	var totp = new AeroGear.Totp();
-    totp.generate(function(result) { /* result is the otp */ );
+```javascript
+var totp = new AeroGear.Totp();
+totp.generate(function(result) { /* result is the otp */ );
+```
 
 or seperate methods
 
