@@ -28,7 +28,7 @@ namespace AeroGear.OTP
     public class Repository
     {
         private const string FILE_NAME = "secret.txt";
-        private byte[] saltBytes = Encoding.Unicode.GetBytes("897752749");
+        private byte[] SALT = Encoding.Unicode.GetBytes("897752749");
 
         public async Task<string> ReadToken()
         {
@@ -44,17 +44,17 @@ namespace AeroGear.OTP
             }
 
             var text = await ReadFileContentsAsync(file);
-            byte[] result = ProtectedData.Unprotect(Encoding.UTF8.GetBytes(text), saltBytes);
+            byte[] result = ProtectedData.Unprotect(Convert.FromBase64String(text), SALT);
             return Encoding.UTF8.GetString(result, 0, result.Length);
         }
 
         public async Task<IStorageFile> SaveToken(string token)
         {
-            byte[] protectedToken = ProtectedData.Protect(Encoding.UTF8.GetBytes(token), saltBytes);
+            byte[] protectedToken = ProtectedData.Protect(Encoding.UTF8.GetBytes(token), SALT);
 
             StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
             var file = await local.CreateFileAsync(FILE_NAME, CreationCollisionOption.ReplaceExisting);
-            await WriteDataToFileAsync(file, protectedToken);
+            await WriteDataToFileAsync(file, Encoding.UTF8.GetBytes(Convert.ToBase64String(protectedToken)));
             
             return file;
         }
