@@ -49,6 +49,19 @@
     </config-file>
 
     <source-file src="src/android/aerogear-otp-java-1.0.0.jar" target-dir="libs"/>
-
   </platform>
+
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/*">
+      <feature name="AeroGearPlugin">
+        <param name="wp-package" value="OtpPlugin"/>
+      </feature>
+    </config-file>
+    <source-file src="src/wp8/OtpPlugin.cs" />
+    <source-file src="src/wp8/Repository.cs" />
+    
+    <source-file src="src/wp8/otp-lib/Clock.cs" />
+    <source-file src="src/wp8/otp-lib/Totp.cs" />
+    <source-file src="src/wp8/otp-lib/Base32Encoding.cs" />
+  </platform>  
 </plugin>
