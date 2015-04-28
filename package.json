@@ -1,0 +1,40 @@
+{
+  "name": "aerogear-cordova-otp",
+  "version": "0.0.2",
+  "description": "Generates a one time password",
+  "cordova": {
+    "id": "org.jboss.aerogaer.cordova.otp",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerogear/aerogear-cordova-otp.git"
+  },
+  "keywords": [
+    "cordova",
+    "aerogear",
+    "time",
+    "password",
+    "otp",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-wp8"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "edewit",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://issues.jboss.org/browse/AGCORDOVA"
+  },
+  "homepage": "https://aerogear.org/docs/specs/aerogear-cordova/"
+}

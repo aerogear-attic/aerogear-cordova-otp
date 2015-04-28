@@ -7,6 +7,7 @@
   <name>AeroGear OTP</name>
   <description>Generates a one time password</description>
   <license>MIT</license>
+  <keywords>cordova,aerogear,time,password,otp</keywords>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
