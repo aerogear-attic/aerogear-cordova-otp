@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="org.jboss.aerogear.cordova.otp"
+        id="org.jboss.aerogaer.cordova.otp"
         version="0.0.2">
 
   <name>AeroGear OTP</name>
   <description>Generates a one time password</description>
   <license>MIT</license>
+  <keywords>cordova,aerogear,time,password,otp</keywords>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
