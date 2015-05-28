@@ -1,6 +1,6 @@
 {
   "name": "aerogear-cordova-otp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generates a one time password",
   "cordova": {
     "id": "org.jboss.aerogaer.cordova.otp",
