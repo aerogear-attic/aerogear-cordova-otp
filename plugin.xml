@@ -11,6 +11,7 @@
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
+    <engine name="cordova-android" version=">=3.7.2" />
   </engines>
 
   <dependency id="com.phonegap.plugins.barcodescanner"/>
@@ -29,7 +30,7 @@
 
     <header-file src="src/ios/CDVAeroGearPlugin.h" />
     <source-file src="src/ios/CDVAeroGearPlugin.m"/>
-    
+
     <header-file src="src/ios/AGOtp.h"/>
     <header-file src="src/ios/AGTotp.h"/>
     <header-file src="src/ios/AGBase32.h"/>
@@ -60,9 +61,9 @@
     </config-file>
     <source-file src="src/wp8/OtpPlugin.cs" />
     <source-file src="src/wp8/Repository.cs" />
-    
+
     <source-file src="src/wp8/otp-lib/Clock.cs" />
     <source-file src="src/wp8/otp-lib/Totp.cs" />
     <source-file src="src/wp8/otp-lib/Base32Encoding.cs" />
-  </platform>  
+  </platform>
 </plugin>
