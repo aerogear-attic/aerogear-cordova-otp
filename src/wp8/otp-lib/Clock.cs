@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace AeroGear.OTP
 {
-
+    /// <summary>
+    /// A clock that ticks every 30 seconds a different tick
+    /// </summary>
     public class Clock
     {
 
@@ -25,7 +24,7 @@ namespace AeroGear.OTP
         {
             get
             {
-                long currentTimeSeconds = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond / 1000;
+                long currentTimeSeconds = (long) (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds / 1000;
                 return currentTimeSeconds / interval;
             }
         }
