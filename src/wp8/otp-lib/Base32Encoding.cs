@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace AeroGear.OTP
 {
+    /// <summary>
+    /// Encodes arbitrary byte arrays as case-insensitive base-32 strings. 
+    /// The implementation is slightly different than in RFC 4648. During encoding, padding is not added, and during decoding 
+    /// the last incomplete chunk is not taken into account
+    /// </summary>
     public class Base32Encoding
     {
         private const int SHIFT = 5;
@@ -87,6 +92,11 @@ namespace AeroGear.OTP
             return result.ToString();
         }
 
+        /// <summary>
+        /// Convert uppercase character A-Z and 2-7 to int value
+        /// </summary>
+        /// <param name="c">the character to convert</param>
+        /// <returns>0 for A till Z 26 for 2 till 7</returns>
         protected static int CharToValue(char c)
         {
             int value = (int)c;
@@ -103,6 +113,11 @@ namespace AeroGear.OTP
             throw new ArgumentException("Character is not a Base32 character.", "" + c);
         }
 
+        /// <summary>
+        /// Convert value to char A-Z and 2-7
+        /// </summary>
+        /// <param name="b">the value to convert</param>
+        /// <returns>the corresponding character</returns>
         private static char ValueToChar(int b)
         {
             if (b < 26)

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace AeroGear.OTP
 {
@@ -33,7 +32,6 @@ namespace AeroGear.OTP
         }
 
         /// <summary>
-        /// Prover - To be used only on the client side
         /// Retrieves the encoded URI to generated the QRCode required by Google Authenticator
         /// </summary>
         /// <param name="name"> Account name </param>
@@ -54,21 +52,15 @@ namespace AeroGear.OTP
 
         /// <summary>
         /// Verifier - To be used only on the server side
-        /// <p/>
-        /// Taken from Google Authenticator with small modifications from </summary>
-        /// {<seealso cref= <a href="http://code.google.com/p/google-authenticator/source/browse/src/com/google/android/apps/authenticator/PasscodeGenerator.java?repo=android#212">PasscodeGenerator.java</a>}
-        /// <p/>
+        /// 
         /// Verify a timeout code. The timeout code will be valid for a time
         /// determined by the interval period and the number of adjacent intervals
         /// checked.
-        /// </seealso>
+        /// 
         /// <param name="otp"> Timeout code </param>
-        /// <returns> True if the timeout code is valid
-        ///         <p/>
-        ///         Author: sweis@google.com (Steve Weis) </returns>
+        /// <returns> True if the timeout code is valid</returns>
         public virtual bool verify(string otp)
         {
-
             long code = long.Parse(otp);
             long currentInterval = clock.CurrentInterval;
 
@@ -94,6 +86,7 @@ namespace AeroGear.OTP
         {
             byte[] data = Base32Encoding.ToBytes(secret);
             var hash = new HMACSHA1(data).ComputeHash(BitConverter.GetBytes(interval).Reverse().ToArray());
+
             return bytesToInt(hash);
         }
 
